@@ -4,6 +4,7 @@ applications:
       phases:
         preBuild:
           commands:
+            - nvm use 18
             - npm install
         build:
           commands:
@@ -12,8 +13,5 @@ applications:
         baseDirectory: packages/nextjs-app/.next
         files:
           - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
       buildPath: /
     appRoot: packages/nextjs-app
